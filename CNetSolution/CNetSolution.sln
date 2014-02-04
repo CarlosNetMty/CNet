@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNet.Web", "CNet.Web\CNet.Web.csproj", "{1C44AC69-D5AD-449E-A713-E8D81CF5F300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNet.Web.Tests", "CNet.Web.Tests\CNet.Web.Tests.csproj", "{31F9D669-4FBB-456D-B7B7-B27F9706705F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNet.PoC", "CNet.PoC\CNet.PoC.csproj", "{0B312C2E-7D74-421E-B25C-4C3BC132508F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C44AC69-D5AD-449E-A713-E8D81CF5F300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C44AC69-D5AD-449E-A713-E8D81CF5F300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C44AC69-D5AD-449E-A713-E8D81CF5F300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C44AC69-D5AD-449E-A713-E8D81CF5F300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F9D669-4FBB-456D-B7B7-B27F9706705F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F9D669-4FBB-456D-B7B7-B27F9706705F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F9D669-4FBB-456D-B7B7-B27F9706705F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F9D669-4FBB-456D-B7B7-B27F9706705F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

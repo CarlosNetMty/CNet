@@ -22,27 +22,29 @@ namespace CNet.PoC
             Console.WriteLine("Staring");
             Console.ReadLine();
 
-            Mapper.CreateMap<SqlDataReader, Item>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(source => source["LName"]));
 
 
-            string connectionString = "data source=devdb5.maintenancenet.net\\dev;initial catalog=MnetReportUP;User=mn; Password=3int3ll3kt!";
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand() 
-            { 
-                Connection = connection,
-                CommandType = System.Data.CommandType.Text,
-                CommandText = "SELECT TOP 10 * FROM tblUsers"
-            };
+            //Mapper.CreateMap<SqlDataReader, Item>()
+            //    .ForMember(dest => dest.Name, opt => opt.MapFrom(source => source["LName"]));
 
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
-            List<Item> result = new List<Item>();
 
-            while (reader.Read()) 
-            { 
-                result.Add(Mapper.Map<Item>(reader));
-            }
+            //string connectionString = "data source=devdb5.maintenancenet.net\\dev;initial catalog=MnetReportUP;User=mn; Password=3int3ll3kt!";
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //SqlCommand command = new SqlCommand() 
+            //{ 
+            //    Connection = connection,
+            //    CommandType = System.Data.CommandType.Text,
+            //    CommandText = "SELECT TOP 10 * FROM tblUsers"
+            //};
+
+            //connec♣tion.Open();
+            //SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+            //List<Item> result = new List<Item>();
+
+            //while (reader.Read()) 
+            //{ 
+            //    result.Add(Mapper.Map<Item>(reader));
+            //}
 
             //DataSet dataSet = new DataSet();
             //SqlDataAdapter adapter = new SqlDataAdapter(command);

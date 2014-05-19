@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNet.Web.Tests", "CNet.Web.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNet.PoC", "CNet.PoC\CNet.PoC.csproj", "{0B312C2E-7D74-421E-B25C-4C3BC132508F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defero.Model", "Defero.Model\Defero.Model.csproj", "{0D0E4A92-C152-467F-9F88-892D90DF2745}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defero.Core", "Defero.Core\Defero.Core.csproj", "{EC34981F-2433-4A94-96DC-556C370DE289}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B312C2E-7D74-421E-B25C-4C3BC132508F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0E4A92-C152-467F-9F88-892D90DF2745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0E4A92-C152-467F-9F88-892D90DF2745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0E4A92-C152-467F-9F88-892D90DF2745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0E4A92-C152-467F-9F88-892D90DF2745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC34981F-2433-4A94-96DC-556C370DE289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC34981F-2433-4A94-96DC-556C370DE289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC34981F-2433-4A94-96DC-556C370DE289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC34981F-2433-4A94-96DC-556C370DE289}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Defero.Core.Product">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <AssociationLine Name="SpecializationFeatures" Type="Defero.Core.ProductSpecializationFeature" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="5.594" />
+        <Point X="2.562" Y="5.594" />
+        <Point X="2.562" Y="6" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DefinitionFeatures" Type="Defero.Core.ProductFeature" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="5" />
+        <Point X="6" Y="4.296" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.027" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAUAAAABAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SpecializationFeatures" />
+      <Property Name="DefinitionFeatures" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Defero.Core.ProductCategory">
+    <Position X="7.75" Y="5.5" Width="1.75" />
+    <AssociationLine Name="DomainItems" Type="Defero.Core.ProductType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.625" Y="6.603" />
+        <Point X="8.625" Y="7.813" />
+        <Point X="6.75" Y="7.813" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DomainFeatures" Type="Defero.Core.ProductFeature" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.552" Y="5.5" />
+        <Point X="8.552" Y="3.938" />
+        <Point X="6.75" Y="3.938" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.07" Y="0.058" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductCategory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DomainItems" />
+      <Property Name="DomainFeatures" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Defero.Core.ProductSpecializationFeature">
+    <Position X="1.5" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>SpecializationFeature.cs</FileName>
+      <NewMemberFileName>ProductFeature.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Defero.Core.ProductType">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <AssociationLine Name="SpecializationFeatures" Type="Defero.Core.ProductSpecializationFeature" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="7.76" />
+        <Point X="2.562" Y="7.76" />
+        <Point X="2.562" Y="7.296" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DefinitionFeatures" Type="Defero.Core.ProductFeature" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="8.103" />
+        <Point X="6" Y="8.478" />
+        <Point X="0.698" Y="8.478" />
+        <Point X="0.698" Y="3.812" />
+        <Point X="5.25" Y="3.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SpecializationFeatures" />
+      <Property Name="DefinitionFeatures" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Defero.Core.ProductFeatureValue">
+    <Position X="9" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ProductFeatureValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Defero.Core.ProductFeature">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAACBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductFeature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AvailableValues" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.825" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

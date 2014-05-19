@@ -1,8 +1,8 @@
 ﻿
 $(document).ready(function () {
     //Store language when changed
-    Defero.Global.LanguageCallbacks.add(function () {
-        Collective.Storage.Set("$_Lang", Defero.Global.CurrentLanguage);
+    Defero.Settings.LanguageCallbacks.add(function () {
+        Collective.Storage.Set("$_Lang", Defero.Settings.CurrentLanguage);
     });
 
     //Load current modules

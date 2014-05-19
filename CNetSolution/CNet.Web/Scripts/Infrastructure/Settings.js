@@ -6,7 +6,7 @@ Defero.Settings.IsProductionEnabled = false;
 
 // Language Management
 Defero.Settings.LanguageCallbacks = $.Callbacks();
-Defero.Settings.CurrentLanguage = Defero.Storage.Get("$_Lang", "ENG");
+Defero.Settings.CurrentLanguage = "ENG";
 
 // Miscellaneous
 Defero.Settings.UseNotifications = true;

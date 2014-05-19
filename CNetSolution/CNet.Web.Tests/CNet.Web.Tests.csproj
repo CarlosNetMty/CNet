@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CNet.Web\CNet.Web.csproj">
-      <Project>{1C44AC69-D5AD-449E-A713-E8D81CF5F300}</Project>
+      <Project>{f4ec6252-f284-4455-8080-636e64c61b94}</Project>
       <Name>CNet.Web</Name>
     </ProjectReference>
   </ItemGroup>

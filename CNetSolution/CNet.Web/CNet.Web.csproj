@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1C44AC69-D5AD-449E-A713-E8D81CF5F300}</ProjectGuid>
+    <ProjectGuid>{F4EC6252-F284-4455-8080-636E64C61B94}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,18 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -68,6 +60,9 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -75,6 +70,9 @@
     <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -193,7 +191,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\jquery-ui-1.10.4.css" />
+    <Content Include="Content\jQueryUI-1.10.4.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -228,30 +226,21 @@
     <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Framework\jquery-ui-1.10.4.js" />
-    <Content Include="Scripts\Framework\modernizr-2.7.1.js" />
-    <None Include="Scripts\Legacy\jquery-1.8.2-vsdoc.js" />
-    <None Include="Scripts\Legacy\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\Framework\jquery-2.1.0.js" />
+    <Content Include="Scripts\Framework\jQuery-2.1.0.js" />
+    <Content Include="Scripts\Framework\jQueryUI-1.10.4.js" />
+    <Content Include="Scripts\Framework\json.js" />
+    <Content Include="Scripts\Framework\jStorage.js" />
+    <Content Include="Scripts\Framework\Modernizr-2.7.1.js" />
     <Content Include="Scripts\Infrastructure\Extensions.js" />
     <Content Include="Scripts\Infrastructure\Global.js" />
     <Content Include="Scripts\Infrastructure\Init.js" />
     <Content Include="Scripts\Infrastructure\Settings.js" />
     <Content Include="Scripts\Infrastructure\Translations.js" />
-    <Content Include="Scripts\Legacy\jquery-1.8.2.js" />
-    <Content Include="Scripts\Legacy\jquery-1.8.2.min.js" />
-    <Content Include="Scripts\Legacy\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\Legacy\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\Legacy\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\Legacy\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\Legacy\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\Legacy\jquery.validate.js" />
-    <Content Include="Scripts\Legacy\jquery.validate.min.js" />
     <Content Include="Scripts\Legacy\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\Legacy\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\Legacy\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\Legacy\knockout-2.2.0.js" />
-    <Content Include="Scripts\Legacy\modernizr-2.6.2.js" />
     <Content Include="Scripts\namespace.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

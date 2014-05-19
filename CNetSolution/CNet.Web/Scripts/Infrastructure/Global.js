@@ -107,12 +107,16 @@ Defero.Global.OnSave = function (redirectUrl) {
 
 // *************** Storage ***************
 
-Defero.Global.Get = function (key, defaultValue) {
+jQuery.namespace("Defero.Storage");
+
+Defero.Storage.Get = function (key, defaultValue) {
 
     return $.jStorage.get(key, defaultValue);
 }
 
-Defero.Global.Set = function (key, value) {
+Defero.Storage.Set = function (key, value) {
 
     return $.jStorage.set(key, value);
 }
+
+Defero.Settings.CurrentLanguage = Defero.Storage.Get("$_Lang", Defero.Settings.CurrentLanguage);

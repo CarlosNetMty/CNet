@@ -8,10 +8,15 @@ namespace Defero.Core
 {
     public static class Utils
     {
-        public static bool IsInstanceAndHasValue(this object instance)
+        public static bool IsInstanceAndHasValue(this IGuidDefiniedObject instance)
         {
-            return instance != null;
+            return instance != null && instance.Guid != null && !string.IsNullOrEmpty(instance.Guid.ToString());
         }
+    }
+
+    public abstract class ModelBase : IGuidDefiniedObject
+    {
+        public Guid Guid { get; }
     }
 
     public interface IGuidDefiniedObject 
@@ -24,6 +29,11 @@ namespace Defero.Core
         public override bool Equals(IGuidDefiniedObject x, IGuidDefiniedObject y)
         {
             return x.Guid.Equals(y);
+        }
+
+        public override int GetHashCode(IGuidDefiniedObject obj)
+        {
+            return base.GetHashCode();
         }
     }
 }

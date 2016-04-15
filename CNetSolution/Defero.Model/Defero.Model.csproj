@@ -39,7 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductCategory.cs" />
+    <Compile Include="ProductCodeTypes.cs" />
+    <Compile Include="ProductFeature.cs" />
+    <Compile Include="ProductFeatureValue.cs" />
+    <Compile Include="ProductType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProductDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Defero.Core\Defero.Core.csproj">
+      <Project>{ec34981f-2433-4a94-96dc-556c370de289}</Project>
+      <Name>Defero.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

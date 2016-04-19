@@ -41,22 +41,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductCategory.cs" />
-    <Compile Include="ProductCodeTypes.cs" />
-    <Compile Include="ProductFeature.cs" />
-    <Compile Include="ProductFeatureValue.cs" />
-    <Compile Include="ProductType.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductCategory.cs" />
+    <Compile Include="Products\ProductCode.cs" />
+    <Compile Include="Products\ProductCodeTypes.cs" />
+    <Compile Include="Products\ProductFeature.cs" />
+    <Compile Include="Products\ProductFeatureValue.cs" />
+    <Compile Include="Products\ProductType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ProductDiagram.cd" />
+    <None Include="Products.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Defero.Core\Delta.Core.csproj">
       <Project>{ec34981f-2433-4a94-96dc-556c370de289}</Project>
       <Name>Delta.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administration\" />
+    <Folder Include="Inventory\" />
+    <Folder Include="Publications\" />
+    <Folder Include="Purchases\" />
+    <Folder Include="Sales\" />
+    <Folder Include="Security\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

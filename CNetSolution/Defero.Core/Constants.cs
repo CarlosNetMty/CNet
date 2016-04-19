@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Delta.Core
 {
-    public interface IStore
+    public static class Constants
     {
-        void Add(Entity entity);
-        void Remove(Entity entity);
-        void Save();
+        public static class Database
+        {
+            public static readonly string Name = "SigmaDatabase";
+        }
     }
 }

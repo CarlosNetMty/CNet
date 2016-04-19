@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeltaContext.cs" />
+    <Compile Include="Products\Repository.Products.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="Products\Context.Products.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,6 +70,15 @@
       <Project>{0d0e4a92-c152-467f-9f88-892d90df2745}</Project>
       <Name>Delta.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administration\" />
+    <Folder Include="Inventory\" />
+    <Folder Include="Publications\" />
+    <Folder Include="Purchases\" />
+    <Folder Include="Sales\" />
+    <Folder Include="Security\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

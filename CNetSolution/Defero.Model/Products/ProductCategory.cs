@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using Delta.Core;
@@ -8,9 +9,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Delta.Model
 {
-    public class ProductCategory : Entity, PersistableEntity
+    public class ProductCategory : Entity
     {
-        public string Name { get; set; }
+        [Required, MaxLength(100)] public string Name { get; set; }
         public virtual ICollection<ProductType> Types { get; set; }
         [NotMapped] public virtual ICollection<ProductFeature> Features 
         {
@@ -20,10 +21,6 @@ namespace Delta.Model
                     .SelectMany(item => item.Features)
                     .Distinct() as ICollection<ProductFeature>;
             }
-        }
-        public async Task<bool> Save(IStore store)
-        {
-            throw new NotImplementedException();
         }
     }
 }

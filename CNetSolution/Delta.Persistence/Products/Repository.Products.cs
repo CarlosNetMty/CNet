@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Delta.Core
+namespace Delta.Persistence
 {
-    public interface PersistableEntity
+    public partial class Repository
     {
-        Task<bool> Save(IStore store); 
     }
 }

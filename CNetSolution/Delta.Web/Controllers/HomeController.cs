@@ -10,7 +10,6 @@ namespace Delta.Web.Controllers
     {
         public ActionResult Index()
         {
-            Delta.Persistence.DeltaContext context = new Delta.Persistence.DeltaContext();
             return View();
         }
 

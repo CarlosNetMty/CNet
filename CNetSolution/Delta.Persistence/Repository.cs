@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Delta.Persistence
 {
-    public abstract class Repository
+    public partial class Repository
     {
         
     }

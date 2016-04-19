@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Defero.Core;
+using Delta.Core;
 
-namespace Defero.Model
+namespace Delta.Model
 {
-    public class ProductFeatureValue : ModelBase
+    public class ProductFeatureValue : Entity
     {
-        public Product Product { get; set; }
         public ProductFeature Feature { get; set; }
         public string Value { get; set; }
     }

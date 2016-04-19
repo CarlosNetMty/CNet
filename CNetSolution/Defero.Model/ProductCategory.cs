@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Defero.Core;
+using Delta.Core;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Defero.Model
+namespace Delta.Model
 {
-    public class ProductCategory : ModelBase
+    public class ProductCategory : Entity, PersistableEntity
     {
         public string Name { get; set; }
-        public ICollection<ProductType> Types { get; set; }
-        public ICollection<ProductFeature> Features 
+        public virtual ICollection<ProductType> Types { get; set; }
+        [NotMapped] public virtual ICollection<ProductFeature> Features 
         {
             get 
             {
                 return Types
                     .SelectMany(item => item.Features)
-                    .Distinct(new GuidDefiniedObjectComparer()) as ICollection<ProductFeature>;
+                    .Distinct() as ICollection<ProductFeature>;
             }
+        }
+        public async Task<bool> Save(IStore store)
+        {
+            throw new NotImplementedException();
         }
     }
 }

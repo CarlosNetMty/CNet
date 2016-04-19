@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Defero.Core
+namespace Delta.Core
 {
     public static class Utils
     {
@@ -13,12 +13,6 @@ namespace Defero.Core
             return instance != null && instance.Guid != null && !string.IsNullOrEmpty(instance.Guid.ToString());
         }
     }
-
-    public abstract class ModelBase : IGuidDefiniedObject
-    {
-        public Guid Guid { get; }
-    }
-
     public interface IGuidDefiniedObject 
     {
         Guid Guid { get; }

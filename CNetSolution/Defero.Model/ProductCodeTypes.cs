@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Defero.Core;
+using Delta.Core;
 
-namespace Defero.Model
+namespace Delta.Model
 {
     public enum ProductCodeTypes
     {

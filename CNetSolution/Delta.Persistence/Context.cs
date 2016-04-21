@@ -12,5 +12,7 @@ namespace Delta.Persistence
     public partial class Context : DbContext
     {
         public Context() : base(Constants.Database.Name) { }
+
+        public System.Data.Entity.DbSet<Delta.Model.ProductCode> ProductCodes { get; set; }
     }
 }

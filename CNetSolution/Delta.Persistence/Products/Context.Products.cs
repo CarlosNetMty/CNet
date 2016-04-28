@@ -16,5 +16,6 @@ namespace Delta.Persistence
         public DbSet<ProductFeature> ProductFeatures { get; set; }
         public DbSet<ProductFeatureValue> ProductFeatureValues { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<ProductCode> ProductCodes { get; set; }
     }
 }

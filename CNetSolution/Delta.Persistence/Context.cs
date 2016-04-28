@@ -13,6 +13,9 @@ namespace Delta.Persistence
     {
         public Context() : base(Constants.Database.Name) { }
 
-        public System.Data.Entity.DbSet<Delta.Model.ProductCode> ProductCodes { get; set; }
+        public void Update<T>(T entry) where T : Entity
+        {
+            Entry<T>(entry).State = EntityState.Modified;
+        }
     }
 }

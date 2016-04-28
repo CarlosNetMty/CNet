@@ -1,22 +1,21 @@
-using System;
 using Microsoft.Practices.Unity;
-using Microsoft.Practices.Unity.Configuration;
+using System;
+using System.Web.Http;
+using Unity.WebApi;
 
-namespace Delta.WebAPI.App_Start
+namespace Delta.WebAPI
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.
     /// </summary>
-    public class UnityConfig
+    public static class UnityConfig
     {
-        #region Unity Container
         private static Lazy<IUnityContainer> container = new Lazy<IUnityContainer>(() =>
         {
             var container = new UnityContainer();
             RegisterTypes(container);
             return container;
         });
-
         /// <summary>
         /// Gets the configured Unity container.
         /// </summary>
@@ -24,8 +23,6 @@ namespace Delta.WebAPI.App_Start
         {
             return container.Value;
         }
-        #endregion
-
         /// <summary>Registers the type mappings with the Unity container.</summary>
         /// <param name="container">The unity container to configure.</param>
         /// <remarks>There is no need to register concrete types such as controllers or API controllers (unless you want to 
@@ -37,9 +34,12 @@ namespace Delta.WebAPI.App_Start
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
-            Delta.Persistence.UnityConfig.RegisterTypes(container);
-            Delta.Model.UnityConfig.RegisterTypes(container);
+            // it's NOT necessary to register your controllers
             Delta.Core.UnityConfig.RegisterTypes(container);
+            Delta.Model.UnityConfig.RegisterTypes(container);
+            Delta.Persistence.UnityConfig.RegisterTypes(container);
+            
+            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }
 }

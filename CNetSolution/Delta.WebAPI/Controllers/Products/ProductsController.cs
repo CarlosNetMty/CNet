@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 
-namespace Delta.WebAPI.Controllers
+namespace Delta.WebAPI.Controllers.Products
 {
     public class ProductsController : DeltaApiController<Product>
     {
-        public ProductsController(IRepository<Product> repository) : base(repository) { }
+        public ProductsController(IRepository<Product> repository) : base(repository)
+        { }
         // GET: api/Products
         public IQueryable<Product> GetProducts()
         {

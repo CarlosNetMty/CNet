@@ -1,5 +1,6 @@
 ﻿using Delta.Core;
 using Delta.Model;
+using Delta.Model.Products;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;

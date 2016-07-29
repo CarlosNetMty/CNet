@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Delta.Core;
 
-namespace Delta.Model
+namespace Delta.Model.Products
 {
     public enum ProductCodeTypes
     {

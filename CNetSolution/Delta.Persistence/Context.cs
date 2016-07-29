@@ -1,18 +1,18 @@
 ﻿using Delta.Core;
-using Delta.Model;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Delta.Persistence
 {
     public partial class Context : DbContext
     {
-        public Context() : base(Constants.Database.Name) { }
-
+        public Context() : base(Constants.Database.Name)
+        {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Context>());
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);    
+        }
         public void Update<T>(T entry) where T : Entity
         {
             Entry<T>(entry).State = EntityState.Modified;

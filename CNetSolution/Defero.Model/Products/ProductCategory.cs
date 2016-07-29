@@ -7,7 +7,7 @@ using Delta.Core;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Delta.Model
+namespace Delta.Model.Products
 {
     public class ProductCategory : Entity
     {

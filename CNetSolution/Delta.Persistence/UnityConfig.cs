@@ -1,11 +1,9 @@
 ﻿using Delta.Core;
-using Delta.Model;
+using Delta.Model.Orders;
+using Delta.Model.Products;
+using Delta.Persistence.Orders;
+using Delta.Persistence.Products;
 using Microsoft.Practices.Unity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Delta.Persistence
 {
@@ -14,11 +12,17 @@ namespace Delta.Persistence
         public static void RegisterTypes(IUnityContainer container)
         {
             container.RegisterType<Context>();
-
-            #region Repositories
-
+            #region Orders
+            container.RegisterType<IRepository<Order>, OrderRepository>();
+            container.RegisterType<IRepository<OrderItem>, OrderItemRepository>();
+            #endregion
+            #region Products
             container.RegisterType<IRepository<Product>, ProductRepository>();
-
+            container.RegisterType<IRepository<ProductCategory>, ProductCategoryRepository>();
+            container.RegisterType<IRepository<ProductCode>, ProductCodeRepository>();
+            container.RegisterType<IRepository<ProductFeature>, ProductFeatureRepository>();
+            container.RegisterType<IRepository<ProductFeatureValue>, ProductFeatureValueRepository>();
+            container.RegisterType<IRepository<ProductType>, ProductTypeRepository>();
             #endregion
         }
     }

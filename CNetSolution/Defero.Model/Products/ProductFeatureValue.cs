@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
-namespace Delta.Model
+namespace Delta.Model.Products
 {
     public class ProductFeatureValue : Entity
     {

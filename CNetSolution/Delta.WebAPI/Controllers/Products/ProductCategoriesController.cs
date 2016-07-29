@@ -1,120 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+﻿using Delta.Core;
+using Delta.Model;
+using Delta.Model.Products;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Delta.Model;
-using Delta.Persistence;
 
 namespace Delta.WebAPI.Controllers.Products
 {
-    public class ProductCategoriesController : ApiController
+    public class ProductCategoriesController : DeltaApiController<ProductCategory>
     {
-        private Context db = new Context();
-
+        public ProductCategoriesController(IRepository<ProductCategory> repository) : base(repository)
+        { }
         // GET: api/ProductCategories
         public IQueryable<ProductCategory> GetProductCategories()
         {
-            return db.ProductCategories;
+            return All();
         }
-
         // GET: api/ProductCategories/5
         [ResponseType(typeof(ProductCategory))]
         public async Task<IHttpActionResult> GetProductCategory(long id)
         {
-            ProductCategory productCategory = await db.ProductCategories.FindAsync(id);
-            if (productCategory == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(productCategory);
+            return await Get(id);
         }
-
         // PUT: api/ProductCategories/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutProductCategory(long id, ProductCategory productCategory)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != productCategory.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(productCategory).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductCategoryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
+            return await Put(id, productCategory);
         }
-
         // POST: api/ProductCategories
         [ResponseType(typeof(ProductCategory))]
         public async Task<IHttpActionResult> PostProductCategory(ProductCategory productCategory)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.ProductCategories.Add(productCategory);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = productCategory.Id }, productCategory);
+            return await Post(productCategory);
         }
-
         // DELETE: api/ProductCategories/5
         [ResponseType(typeof(ProductCategory))]
         public async Task<IHttpActionResult> DeleteProductCategory(long id)
         {
-            ProductCategory productCategory = await db.ProductCategories.FindAsync(id);
-            if (productCategory == null)
-            {
-                return NotFound();
-            }
-
-            db.ProductCategories.Remove(productCategory);
-            await db.SaveChangesAsync();
-
-            return Ok(productCategory);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool ProductCategoryExists(long id)
-        {
-            return db.ProductCategories.Count(e => e.Id == id) > 0;
+            return await Delete(id);
         }
     }
 }

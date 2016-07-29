@@ -6,7 +6,7 @@ using System.Text;
 using Delta.Core;
 using System.Threading.Tasks;
 
-namespace Delta.Model
+namespace Delta.Model.Products
 {
     public class ProductFeature : Entity
     {
